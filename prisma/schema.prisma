@@ -1,0 +1,41 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       Int        @id @default(autoincrement())
+  email    String      @unique
+  username String
+  password String
+}
+
+model Token {
+  id            Int     @id @default(autoincrement())
+  userId        Int
+  accessToken   String
+  refreshToken  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Venue {
+  id          Int      @id @default(autoincrement())
+  name        String
+  photo       String
+  schedule    String
+  contact     String
+  description String
+  tags        String[]
+}
+
+model VenueTags {
+  id         Int      @id @default(autoincrement())
+  categories String[]
+  cuisine    String[]
+  features   String[]
+}
