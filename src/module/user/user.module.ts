@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { JwtModule, JwtService } from '@nestjs/jwt';
-import { PrismaModule } from '../core/orm/prisma.module';
+import { PrismaModule } from '../../core/orm/prisma.module';
 import { UserService } from './user.service';
 import { CommonModule } from '../common/common.module';
 import { PasswordModule } from '../password/password.module';

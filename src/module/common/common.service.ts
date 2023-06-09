@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { PrismaService } from '../core/orm/prisma.service';
-import { EDbField, EDynamicallyAction } from '../core/enum';
+import { PrismaService } from '../../core/orm/prisma.service';
+import { EDbField, EDynamicallyAction } from '../../core/enum';
 
 @Injectable()
 export class CommonService {
@@ -9,12 +9,12 @@ export class CommonService {
 
   public async checkIfUserExists(
     actionWithFoundField: EDynamicallyAction,
-    email: string,
+    field: string | number,
     dbField: EDbField,
   ): Promise<User> {
     const foundUser = await this.prismaService.user.findUnique({
       where: {
-        [dbField]: email,
+        [dbField]: field,
       },
     });
 

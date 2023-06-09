@@ -1,7 +1,8 @@
+import {IsNotEmpty, IsString, Length, Matches} from "class-validator";
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsString, Length, Matches } from 'class-validator';
-import { UserConstant } from '../../core/constant';
-import { Transform } from 'class-transformer';
+import {Transform} from "class-transformer";
+
+import {UserConstant} from "../../../core/constant";
 
 export default class UserDto {
   @ApiProperty()
