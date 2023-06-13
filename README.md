@@ -1,73 +1,123 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Venue Nexus
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Final Okten School project.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Main Technologies:
+HTML5, CSS, JavaScript, TypeScript, Node.js, React, Next.js, Redux, Redux Toolkit, Nest.js, Prisma, PostgreSQL
 
-## Description
+Front-End Technologies:
+- HTML5, CSS
+- JavaScript, TypeScript
+- React, Next.js
+- Redux, Redux Toolkit, Axios
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Back-End Techologies:
+- Nest.js
+- Prisma ORM
+- Multer, Bcrypt, Swagger
 
-## Installation
+Database:
+- PostgreSQL
 
-```bash
-$ npm install
-```
+Tools:
+- Postman, Eslint, Prettier
 
-## Running the app
+Description:
+Website about different kinds of venues. 
 
-```bash
-# development
-$ npm run start
+Users are able to create, edit and delete venues. Before being published, those venues are sent to Administrator's (from now on, Admin) personal account for review.
+If they pass a review, then they are getting published on a Home page.
 
-# watch mode
-$ npm run start:dev
+Since project is using Next.js 13 for its client side, it exploits built in fetch for data integration from Backend , which provides an up-to-date information about all reviewed venues.
 
-# production mode
-$ npm run start:prod
-```
+## Main Features:
 
-## Test
+ 1) _From user perspective:_
 
-```bash
-# unit tests
-$ npm run test
+    • Authentication, Authorization process
+    <br/>
+    • Ability to add, edit and delete venues
+    <br/>
+    • Ability to rate veunes
+    <br/>
+    • Viewing the list of establishments
+    <br/>
+    • Sorting (by rating, average check, publication date, in alphabetical order, proximity to the user)
+    <br/>
+    • Searching by name
+    <br/>
+    • Filtering by criteria (rating, type, range of average check, tag (specified by the establishment), features (Wi-Fi, parking, live music)
+    <br/>
+    • Adding an venue to favorites
+    <br/>
+    • Sending a message to the venue manager (basically a user that added a venue)
+    <br/>
+    • Logging into a personal account (with corresponding privileges)
+  
+  
+2) _Navigation through general sections:_
 
-# e2e tests
-$ npm run test:e2e
+    • Home (All venues)
+    <br/>
+    • Filtering/Search
+    <br/>
+    • Top (with editing capabilities) + Ability to add top categories like "Best venue for weddings, corporate events, birthdays"
+    <br/>
+    • News (add promotions)
+ 
+ 
+3) _Personal Account (Regular User):_
 
-# test coverage
-$ npm run test:cov
-```
+    • Profile Editing
+    <br/>
+    • Adding Venue (after moderation by the venue administrator, the venue is included in the general list)
+    <br/>
+    • Editing Venue
+    <br/>
+    • Deleting Venue
+    <br/>
+    • Adding Venue News
+    <br/>
+    • Deleting Venue News
+    <br/>
+    • Favorites Tab (viewing favorites, removing from favorites)
+    <br/>
+    • My Comments Tab (list of venues with my comments)
+    <br/>
+    • My Ratings Tab (list of venues with my ratings)
+    <br/>
+    • View statistics of views within specified date ranges for personal venue
+    <br/>
+    • Messages from the venue's page (complaint or question via email)
+    
+4) _Personal Account (Administator) (Already has all regular user account functions):_
 
-## Support
+    • List of venues awaiting moderation
+    <br/>
+    • All venues
+    <br/>
+    • Editing all venues
+    <br/>
+    • Deleting any venue
+    <br/>
+    • Editing news in a venue 
+    <br/>
+    • All users
+    <br/>
+    • Editing a user
+    <br/>
+    • Deleting a user
+    <br/>
+    • Linking a venue to another user
+    <br/>
+    • Editing comments and changing venues ratings
+    <br/>
+    • Access to analytics on venue views
+    <br/>
+    • Analytics on venue views over time
+    <br/>
+    • Editing general textual information in the application (About the establishment, contacts...)
+    <br/>
+    • Editing general news
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+## _Project is being optimized for all devices._
